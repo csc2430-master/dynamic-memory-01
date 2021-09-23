@@ -15,10 +15,6 @@ DataArray::DataArray() {
 }
 
 DataArray::DataArray(const DataArray &other) {
-    if (_data != nullptr){
-        delete[] _data;
-        _data = nullptr;
-    }
     _data = new double[other._size];
     _size = other._size;
     for (unsigned int i = 0; i < _size; ++i) {
